@@ -1,0 +1,306 @@
+/*
+   СТИЛИ ИГРЫ:
+*/
+
+/*==================
+Главное поле игры
+====================*/
+#pole {
+ 	width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid rgb(0, 4, 255);
+    box-shadow: 0 0 105px rgb(4, 0, 255);
+    background-image: url(../imegas/igrapole.jpg);
+    cursor: url(../imegas/lizun2.png), pointer;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/*==================
+	Счетчик очков
+====================*/
+#stars {
+	font-size: 45px;
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	top: 9px;
+	left: 20px;
+}
+
+/*==================
+	Абрикос
+====================*/
+.abricos {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	transition: all 1s;
+	position: absolute;
+	top: 0px; /* 0 => 500 - 60 = 450 */
+	left: 60px;/* 0 => 850 - 60 = 800 */
+	display: block;
+	background-image: url(../imegas/apricot.png);
+}
+/* Вылет Абрикоса из центра */
+.center {
+	top: 20px;
+	left: 500px;
+}
+/* Вылет Абрикоса справа */
+.right {
+	top: 20px;
+	left: 800px;
+}
+/* Вылет Абрикоса слева */
+.left {
+	top: 20px;
+	left: 220px;
+}
+
+/*============
+	Яблоко
+==============*/
+.apple {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	transition: all 1s;
+	position: absolute;
+    top: 0px; /* 0 => 500 - 60 = 450 */
+	left: 60px;/* 0 => 850 - 60 = 800 */
+    background-image: url(../imegas/apple.png); 
+    display: block;
+}
+/* Вылет Яблоко из центра */
+.center {
+	top: 20px;
+	left: 450px;
+}
+/* Вылет Яблоко слева */
+.left {
+	top: 20px;
+	left: 210px;
+}
+/* Вылет Яблоко справа */
+.right {
+	top: 20px;
+	left: 730px;
+}
+
+/*===============
+	Облако
+=================*/
+#oblako {
+	width: 680px;
+	height: 120px;
+	top: -34px;
+    position: absolute;
+    left: 170px;
+    background-image: url(../imegas/oblako.png);
+}
+
+/*=================
+	Бомба
+===================*/
+.bomba {
+	width: 120px;
+	height: 69px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	top: 0px; /* 0 => 500 - 50 = 450 */
+	left: 60px;/* 0 => 850-50 = 800 */
+	position: absolute; 
+	background-image: url(../imegas/bomba.png);
+	display: block;
+}	
+/* Вылет Бомбы из центра */
+.center {
+	top: 20px;
+	left: 470px;
+}
+/* Вылет Бомбы слева */
+.left {
+	top: 20px;
+	left: 250px;
+}
+/* Вылет Бомбы справа */
+.right {
+	top: 20px;
+	left: 750px;
+}
+
+/*=================
+	Таймер-блок
+===================*/
+#timer {
+	position: absolute;
+    color: #0c0101;
+    top: 5px;
+    left: 505px;
+    font-size: 37px;
+}
+
+/*==============================
+	Картинка взрыва камней
+==============================*/
+#boom {
+	width: 125px;
+	height: 125px;
+	position: absolute;
+	top: 362px;
+	left: 882px;
+	background-image: url(../imegas/boom.png);
+    transition: 0.3s;
+}
+
+/*=====================================
+	Заствка победителя (с тортиком))
+======================================*/
+#victory {
+	width: 992px;
+    height: 492px;
+    border: 4px solid rgb(255, 0, 0);
+	background: #f1efef;
+	position: absolute;
+	cursor: default;
+}
+/* надпись "Ура! Победа!" на заставке победителя */
+h2 {
+	position: absolute;
+    top: 0px;
+    left: 190px;
+    font-size: 32px;
+    color: #ea1564;
+}
+/* надпись "Это всё мне?!" на заставке победителя */
+h4 {
+	position: absolute;
+    top: 30px;
+    left: 375px;
+    font-size: 30px;
+    color: #a60ca9;
+}
+/* картинка тортикана заставке победителя */
+#victory button {
+	background-image: url(../imegas/cake.png);
+	width: 500px;
+	height: 398px;
+	position: absolute;
+	top: 93px;
+	left: 0px;
+    border: none;
+} 
+/* картинка Лизуна на заставке победителя */
+#victory picture {
+	width: 492px;
+	height: 492px;
+	position: absolute;
+	top: 0px;
+	left: 500px;
+	background-image: url(../imegas/happy.png);
+} 
+
+/*=================================
+	Стартовое окно (заставка)
+================================*/
+#start-block {
+	width: 100%;
+	height: 100%;
+	border: 2px solid rgb(0, 4, 255);
+	box-sizing: border-box;
+    box-shadow: 0 0 55px rgb(255, 25, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../imegas/gob.jpg);
+    cursor: default;
+}
+
+/*=================================
+    Кнопка PLAY в стартовом окне 
+================================*/
+#start-block button {
+	background: url(../imegas/button.png);
+    width: 174px;
+    height: 180px;
+    left: 32px;
+    top: 42px;
+    border: none;
+    cursor: pointer;
+}
+
+/*===============
+	Ворота
+=================*/
+#vorota {
+	width: 600px;
+	height: 250px;
+	position: absolute;
+	top:285px;
+	left: 400px;
+	background-image: url(../imegas/vorota.png);
+}
+
+/*============
+	Камни 
+==============*/
+#kameny {
+	width: 45px;
+	height: 65px;
+	position: absolute;
+	top: -65px;
+	left: 943px;
+	background-image: url(../imegas/stone2.png); 
+}
+
+/*============================
+	Конец игры (заставка)
+===============================*/
+#konec {
+	background: url(../imegas/konec.png);
+    width: 994px;
+    height: 494px;
+    border: 3px solid rgb(255, 0, 0);
+    box-shadow: 0 0 50px rgb(150, 13, 3);
+    color: red;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    cursor: default;
+}
+/* Вывод набранных очков на заставке Конец Игры */
+h3 {
+    position: absolute;
+    top: 245px;
+    left: 345px;
+    font-size: 32px;
+}
+/* Кнопка "Ещё?!" на заставке Конец Игры */
+#konec button {
+	position: absolute;
+    top: 363px;
+    left: 432px;
+    line-height: middle;
+    bottom: 50px;
+    height: 60px;
+    width: 158px;
+    font-size: 30px;
+    color: red;
+    background: rgb(5, 6, 23);
+    border: 3px solid rgb(255, 0, 0);
+    box-shadow: 0 0 150px rgb(255, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* картинка Лизуна на заставке Конец Игры */
+#konec picture {
+	width: 150px;
+    height: 180px;
+    position: absolute;
+    background-image: url(../imegas/logo.png);
+    top: 32px;
+    left: 423px;
+}
